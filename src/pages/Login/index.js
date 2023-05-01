@@ -13,7 +13,9 @@ import {
   InputAdornment 
 } from '@material-ui/core';
 
+//Função de criação do formulário de login
 function Login() {
+  //useContext do React para acessar informações do contexto fornecido pelo componente pai UsuarioContext
   const history = useHistory();
   const { nome, setNome, saldo, setSaldo } = useContext(UsuarioContext);
   
@@ -58,6 +60,7 @@ function Login() {
       </Button>
     </Container>
   )
+  //Quando o botão "Avançar" é clicado a página é redirecionada para a rota "/feira" usando o hook useHistory do React Router.
 };
 
 export default Login;

@@ -16,6 +16,11 @@ const theme = createTheme({
   }
 })
 
+//O método ReactDOM.render() é uma função do React que renderiza o conteúdo em um elemento HTML da página
+//React.StrictMode (destacar problemas potenciais no código). possui os componentes:
+//StylesProvider fornece estilos globais para um aplicativo React
+//ThemeProvider fornecer temas globais para um aplicativo React
+//Routes é um componente que deve conter as rotas do aplicativo
 ReactDOM.render(
   <React.StrictMode>
     <StylesProvider injectFirst>
