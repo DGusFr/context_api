@@ -15,7 +15,7 @@ import {
 
 //Função de criação do formulário de login
 function Login() {
-  //useContext do React para acessar informações do contexto fornecido pelo componente pai UsuarioContext
+  //useContext do React para acessar e consumir informações do contexto fornecido pelo componente pai UsuarioContext
   const history = useHistory();
   const { nome, setNome, saldo, setSaldo } = useContext(UsuarioContext);
   
