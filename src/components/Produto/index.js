@@ -6,6 +6,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import { useCarrinhoContext } from 'common/contexts/Carrinho';
 import { UsuarioContext } from 'common/contexts/Usuario';
 
+//possui as funcionalidades de adiciona e remove produto
 function Produto({
   nome,
   foto,
@@ -13,6 +14,7 @@ function Produto({
   valor,
   unidade
 }) {
+  //extrair os elementos necessários do objeto retornado pela função "useCarrinhoContext()" e torná-los disponíveis para uso no restante do código.
   const { carrinho, adicionarProduto, removerProduto, valorTotal } = useCarrinhoContext();
   const { saldo } = useContext(UsuarioContext);
   const itemNoCarrinho = carrinho.find(item => item.id === id);

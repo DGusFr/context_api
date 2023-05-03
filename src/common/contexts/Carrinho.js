@@ -5,6 +5,8 @@ import { UsuarioContext } from './Usuario';
 const CarrinhoContext = createContext();
 CarrinhoContext.displayName = "Carrinho"
 
+//"CarrinhoProvider"cria um contexto de carrinho de compras e retorna o contexto de carrinho de compras usando o componente
+//O componente "children" é usado para renderizar todos os componentes filhos que são envolvidos pelo CarrinhoContext
 export default function CarrinhoProvider({ children }) {
   const [carrinho, setCarrinho] = useState([]);
   const [quantidadeCarrinho, setQuantidadeCarrinho] = useState(0);
@@ -26,6 +28,7 @@ export default function CarrinhoProvider({ children }) {
 }
 
 export function useCarrinhoContext() {
+  //constante recebe uma arrow function que recebe os contextos "carrinho"...
   const {
     carrinho,
     setCarrinho,
@@ -46,7 +49,7 @@ export function useCarrinhoContext() {
     if (item.id === id) item.quantidade += quantidade;
     return item;
   });
-
+  
   function adicionarProduto(novoProduto) {
     const temOProduto = carrinho.some(item => item.id === novoProduto.id);
     let novoCarrinho = [...carrinho];
