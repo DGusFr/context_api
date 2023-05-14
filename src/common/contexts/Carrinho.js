@@ -62,6 +62,7 @@ export function useCarrinhoContext() {
     setCarrinho(novoCarrinho);
   };
 
+  //função remove itens do carrinho 
   function removerProduto(id) {
     const produto = carrinho.find(item => item.id === id);
     const ultimo = produto.quantidade === 1;
